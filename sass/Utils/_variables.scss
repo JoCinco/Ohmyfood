@@ -1,0 +1,34 @@
+// Colors //
+
+$color-primary: #9356DC;
+
+$color-secondary:#FF79DA;
+
+$color-tertiary:#99E2D0;
+
+$color-dark-grey: rgb(71, 71, 71);
+
+$color-normal-grey: rgb(226, 226, 226);
+
+$color-light-grey: rgb(241, 241, 241);
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+}
+

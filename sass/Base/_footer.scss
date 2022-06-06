@@ -1,0 +1,37 @@
+.ohmyfood-footer {
+    @extend %flex-column;
+    background-color: $color-dark-grey;
+    list-style-type: none;
+    height: 180px;
+
+    &__title {
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    &__list {
+        width: 60%;
+        list-style-type: none;
+        padding-left: 20px;
+        margin: 0;
+
+        li {
+            margin: 7px 0;
+        }
+
+        a {
+            color: white;
+            &:hover {
+                color: lighten($color-primary, 20%);
+            }
+        }
+            
+        i {
+            padding-right: 8px;
+        }
+
+    }
+}
