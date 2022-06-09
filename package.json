@@ -1,0 +1,14 @@
+{
+  "name": "p3_dubois_laurent",
+  "version": "1.0.0",
+  "description": "sass_ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css"
+  },
+  "keywords": [
+    "ohmyfood"
+  ],
+  "author": "duboislaurent",
+  "license": "ISC"
+}
