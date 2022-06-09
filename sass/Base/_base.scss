@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 
 .fonctionnement {
     margin: 0 0 3.5rem 0;
@@ -22,6 +26,7 @@ body {
         
         .list__txt {
             @extend %flex-row;
+            align-items: center;
             cursor: pointer;
             background-color: $color-light-grey;
             font-weight: bold;
@@ -36,22 +41,25 @@ body {
 
             &:hover {
                 background-color: lighten($color-primary, 30%);
+                color: lighten($color-primary, 5%);
                 box-shadow: 0.5rem 0.5rem 0.2rem $color-normal-grey, -1px -2px 2px $color-light-grey;
             }
         }
-        & i {
+        .icone {
             font-size: 1.2rem;
             padding-left: 20px;
             padding-right: 20px;
-            color: $color-dark-grey;
+            
         }
         .number {
             color: white;
             font-weight: normal;
             background-color: $color-primary;
             border-radius: 50%;
-            padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+            padding: 5px 10px;
             font-size: 1rem;
+            position: relative;
+            right: 10px;
         }
     }
 }
@@ -72,12 +80,30 @@ body {
         .container__restaurant {
             @extend %flex-column;
             width: 90%;
-            max-width: 350px;
+            max-width: 600px;
             margin: 10px;
             padding: 0;
             background-color: white;
             border-radius: 20px;
             box-shadow: 0.5rem 0.5rem 0.6rem $color-normal-grey, -1px -2px 5px $color-light-grey;
+            position: relative;
+
+            .restaurant__new {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                background: $color-tertiary;
+                color: darken($color-tertiary, 30%);
+                border-radius: 5%;
+                font-weight: bold;
+                height: 2rem;
+                width: 5rem;
+                right: 1rem;
+                top: 1rem;
+                p {
+                    margin: 0;
+                }
+            }
 
             .restaurant__img {
                 width: 100%;
@@ -86,7 +112,9 @@ body {
                 object-fit: cover;
             }
 
-            .restaurant__txt {
+            .restaurant__description {
+                @extend %flex-row;
+                justify-content: space-between;
                 padding-left: 1rem;
 
                 h3 {
