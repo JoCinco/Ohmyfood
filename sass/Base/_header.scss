@@ -1,40 +1,51 @@
 .ohmyfood-head {
-    @extend %flex-column;
+    @extend %flex-row;
+    align-items: center;
 
-        &__title {
-            @extend %flex-center;
-            margin: 1rem 0 0.5rem 0;
-            font-weight: lighter;
-        }
-
-        &__location {
-            @extend %flex-center;
-            box-shadow: inset 0 6px 10px -10px $color-dark-grey;
-            background-color: $color-normal-grey;
-            font-weight: 900;
-
-            & i {
-                padding-right: 20px;
-            }
-        }
+    &__title {
+        @extend %flex-center;
+        margin: 1rem 0 0.5rem 0;
+        font-weight: lighter;
+        width: 100%;
+    }
     
-        &__intro {
-            @extend %flex-column;
-            @extend %flex-center;
-            background-color: $color-light-grey;
-            align-items: center;
+    &__return {
+        font-size: 2rem;
+        padding: 10px;
 
-            .intro__txt {
-                font-size: 1rem;
-                width: 95%;
+        i {
+            display: flex;
+        }
+    }
+}
 
-                h2 {
-                    margin-bottom: 5px;
-                }
+.location {
+    @extend %flex-center;
+    box-shadow: inset 0 6px 10px -10px $color-dark-grey;
+    background-color: $color-normal-grey;
+    font-weight: 900;
 
-                p {
-                    margin-top: 5px;
-                }
-            }
+    i {
+        padding-right: 20px;
+    }
+}
+    
+.intro {
+    @extend %flex-column;
+    @extend %flex-center;
+    background-color: $color-light-grey;
+    align-items: center;
+
+    &__txt {
+        font-size: 1rem;
+        width: 95%;
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 5px;
+        }
     }
 }
