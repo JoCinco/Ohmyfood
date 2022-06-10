@@ -88,6 +88,16 @@ body {
             box-shadow: 0.5rem 0.5rem 0.6rem $color-normal-grey, -1px -2px 5px $color-light-grey;
             position: relative;
 
+
+            &:hover .fa-regular {
+                opacity: 0;
+            }
+            &:hover .fa-solid {
+                animation: hoverheart 1s forwards;
+            }
+
+            
+
             .restaurant__new {
                 position: absolute;
                 display: grid;
@@ -115,18 +125,28 @@ body {
             .restaurant__description {
                 @extend %flex-row;
                 justify-content: space-between;
+                align-items: center;
                 padding-left: 1rem;
 
-                h3 {
-                    margin-top: 10px;
-                    margin-bottom: 5px;
-                }
+                .description__heart {
+                    font-size: 2rem;                   
+                    
+                    i {
+                        position: absolute;
+                        right: 1rem;
+                        bottom: 2rem;
+                        transition: all 200ms ease-in-out;
+                    }
 
-                p {
-                    margin-top: 0;
-                    margin-bottom: 10px;
+                    .fa-solid {
+                        color: transparent;
+                        background-image: linear-gradient($color-primary , $color-secondary);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        visibility: hidden;           
+                    }
                 }
-            }
+            }            
         }
     }
 }
