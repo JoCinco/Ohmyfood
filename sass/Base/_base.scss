@@ -9,7 +9,7 @@ body {
 
 
 .fonctionnement {
-    margin: 0 0 3.5rem 0;
+    margin: 0 0 2rem 0;
 
     &__title {
         padding: 35px 0 0 15px;
@@ -39,10 +39,8 @@ body {
             padding-right: 0.3rem;
             box-shadow: 0.5rem 0.5rem 0.6rem $color-normal-grey, -1px -2px 5px $color-light-grey;
 
-            &:hover {
-                background-color: lighten($color-primary, 30%);
+            &:hover .icone {
                 color: lighten($color-primary, 5%);
-                box-shadow: 0.5rem 0.5rem 0.2rem $color-normal-grey, -1px -2px 2px $color-light-grey;
             }
         }
         .icone {
@@ -88,16 +86,6 @@ body {
             box-shadow: 0.5rem 0.5rem 0.6rem $color-normal-grey, -1px -2px 5px $color-light-grey;
             position: relative;
 
-
-            &:hover .fa-regular {
-                opacity: 0;
-            }
-            &:hover .fa-solid {
-                animation: hoverheart 1s forwards;
-            }
-
-            
-
             .restaurant__new {
                 position: absolute;
                 display: grid;
@@ -136,6 +124,14 @@ body {
                         right: 1rem;
                         bottom: 2rem;
                         transition: all 200ms ease-in-out;
+                    }
+
+                    &:hover .fa-regular {
+                        opacity: 0;
+                    }
+
+                    &:hover .fa-solid {
+                        animation: hoverheart 1s forwards;
                     }
 
                     .fa-solid {
