@@ -7,12 +7,12 @@
     text-align: center;
     color: white;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 100;
     border-style: none;
     background: linear-gradient(to top left, $color-primary 20%, $color-secondary);
     box-shadow: 1px 10px 10px $color-normal-grey;
     
     &:hover{
-        background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
+        background: linear-gradient(to top left, $color-primary 5%, $color-secondary);
     }
 }
