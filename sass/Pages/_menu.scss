@@ -57,6 +57,17 @@
 
     &__entry {
        padding-left: 25px;
+       position: relative;
+       
+       &::after {
+        content: "";
+        position: absolute;
+        top: 1.4rem;
+        left: 1.5rem;
+        width: 2.6rem;
+        height: 0.25rem;
+        background-color: $color-tertiary;
+       }
     }    
 }
 
@@ -115,6 +126,7 @@
         transition: margin-right 0.5s;
         display: grid;
         place-items: center;
+        overflow: hidden;
 
         i {
             color: white;
