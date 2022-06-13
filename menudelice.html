@@ -1,189 +1,292 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="public/css/normalize.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <script src="https://kit.fontawesome.com/53d9ca1837.js" crossorigin="anonymous"></script>
+    <title>Le délice des sens</title>
 
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="cssp3/stylemenu.css" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/53d9ca1837.js" crossorigin="anonymous"></script>
-        <title>Oh My Food</title>
+</head>
 
-    </head>
+<body>
 
-    <body>
+    <div class="loader">
+        <span class="lettre">O</span>
+        <span class="lettre">H</span>
+        <span class="lettre">M</span>
+        <span class="lettre">Y</span>
+        <span class="lettre">F</span>
+        <span class="lettre">O</span>
+        <span class="lettre">O</span>
+        <span class="lettre">D</span>
+    </div>
 
         <!-- Header -->
 
-        <header>
+    <header class="ohmyfood-head">
 
-            <a href="acceuil.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="acceuil.html" class="ohmyfood-head__return"><i class="fa-solid fa-arrow-left"></i></a>
 
-            <h1>ohmyfood</h1>
+        <h1 class="ohmyfood-head__title">ohmyfood</h1>
 
-            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
+    </header>   
 
-        </header>   
+<main>      
+        <div class="ohmyfood-img">
+            <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image Palette du goût" />
+        </div>
 
-        <main>
+    <section class="ohmyfood-menu">
 
-            <h2>Le délice des sens</h2>
+        <div class="ohmyfood-menu__main-title">
 
-            <div>
+            <h1>Le délice des sens</h1>
 
-                <h3>Entrées</h3>
+            <div class="description__heart">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
 
-                <div>
+        </div>
+        
+        <div class="ohmyfood-menu__entry">
+            <p>ENTRÉES</p>
+        </div>
 
-                    <h4>Tartare de thon</h4>
+        <div class="ohmyfood-menu__services">
 
-                    <div>
+            <div class="ohmyfood-menu__card">
 
-                        <p>Assaisonné au yuzu</p> 
+                <div class="card__recipe">
 
-                        <p>25€</p>
+                    <h4 class="recipe__title">Tartare de thon</h4>
 
-                    </div>
+                    <div class="recipe__subline">
 
-                </div>
-
-                <div>
-                    
-                    <h4>Bouchée de homard croustillant</h4>
-
-                    <div>
-
-                        <p>Et sa farandole de petits légumes</p> 
-
-                        <p>35€</p>
-
-                    </div>
-
-                </div>
-
-                <div>
-                    
-                    <h4>Soupe à l'oignon</h4>
-
-                    <div>
-
-                        <p>Revisitée</p> 
-
-                        <p>20€</p>
+                        <p class="subline__detail">Assaisonné au yuzu</p> 
+                        <p class="subline__price">25€</p>
 
                     </div>
 
                 </div>
 
-                <h3>Plats</h3>
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
 
-                <div>
-                    
-                    <h4>Coquilles Saint-Jacques</h4>
+            </div>
 
-                    <div>
+            <div class="ohmyfood-menu__card">
+                
+                <div class="card__recipe">
 
-                        <p>Accompagnées d'une purée de panais</p> 
+                    <h4 class="recipe__title">Bouchée de homard croustillant</h4>
 
-                        <p>40€</p>
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Et sa farandole de petits légumes</p> 
+                        <p class="subline__price">35€</p>
 
                     </div>
 
                 </div>
-
-                <div>
                     
-                    <h4>Magret de canard</h4>
-
-                    <div>
-
-                        <p>Et parmentier de pommes de terre</p> 
-
-                        <p>35€</p>
-
-                    </div>
-
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
                 </div>
-
-                <div>
-                    
-                    <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-
-                    <div>
-
-                        <p>Sur son lit de gnocchis aux légumes</p> 
-
-                        <p>44€</p>
-
-                    </div>
-
-                </div>
-
-                <h3>Desserts</h3>
-
-                <div>
-                    
-                    <h4>Pétales de violettes glacés</h4>
-
-                    <div>
-
-                        <p>Et purée de noisettes</p> 
-
-                        <p>18€</p>
-
-                    </div>
-
-                </div>
-
-                <div>
-                    
-                    <h4>Fondant au chocolat</h4>
-
-                    <div>
-
-                        <p>Revisité</p> 
-
-                        <p>22€</p>
-
-                    </div>
-
-                </div>
-
-                <div>
-                    
-                    <h4>Millefeuille croustillant</h4>
-
-                    <div>
-
-                        <p>Myrtilles et pâte d’amande</p> 
-
-                        <p>23€</p>
-
-                    </div>
-
-                </div>       
                 
             </div>
 
-        </main>
-
-        <footer>
-
-            <ul class="padfooter"> 
-
-                <li><h1>ohmyfood</h1></li>
-
-                <li><a href="#" class="wcolor"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-
-                <li><a href="#" class="wcolor"><i class="fa-solid fa-hand-holding-hand"></i>Devenir partenaire</a></li>
-
-                <li><a href="#" class="wcolor">Mentions légales</a></li>
+            <div class="ohmyfood-menu__card">
                 
-                <li><a href="#" class="wcolor">Contact</a></li>
+                <div class="card__recipe">
 
-            </ul>
+                    <h4 class="recipe__title">Velouté de cèpes</h4>
 
-        </footer>
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Aux truffes</p> 
+                        <p class="subline__price">20€</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>    
+
+            </div>
+
+        </div>    
+
+        <div class="ohmyfood-menu__entry">
+            <p>PLATS</p>
+        </div>   
+
+        <div class="ohmyfood-menu__services">
+
+            <div class="ohmyfood-menu__card">
+                
+                <div class="card__recipe">
+
+                    <h4 class="recipe__title">Poulet rôti aux herbes de Provence</h4>
+
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Et sa crème de truffe</p> 
+                        <p class="subline__price">40€</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>             
+
+            </div>
+
+            <div class="ohmyfood-menu__card">
+
+                <div class="card__recipe">
+
+                    <h4 class="recipe__title">Langouste rôtie</h4>
+
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Et ses légumes de saison</p> 
+                        <p class="subline__price">35€</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                
+            </div>
+
+            <div class="ohmyfood-menu__card">
+
+                <div class="card__recipe">
+
+                    <h4 class="recipe__title">Côte de boeuf Angus</h4>
+
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Et sa purée de panais</p> 
+                        <p class="subline__price">44€</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                            
+            </div>
+        </div>
+
+        <div class="ohmyfood-menu__entry">
+            <p>DESSERTS</p>
+        </div>
+
+        <div class="ohmyfood-menu__services">
+
+            <div class="ohmyfood-menu__card">
+                
+                <div class="card__recipe">
+
+                    <h4 class="recipe__title">Farandole de desserts</h4>
+
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Du chef</p> 
+                        <p class="subline__price">18€</p>
+
+                    </div>
+
+                </div>
+                
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+            </div>
+
+            <div class="ohmyfood-menu__card">
+                
+                <div class="card__recipe">
+
+                    <h4 class="recipe__title">Crème brulée</h4>
+
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">Revisité</p> 
+                        <p class="subline__price">22€</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+            </div>
+
+            <div class="ohmyfood-menu__card">
+                
+                <div class="card__recipe">
+
+                    <h4 class="recipe__title">Tiramisu</h4>
+
+                    <div class="recipe__subline">
+
+                        <p class="subline__detail">À la noisette</p> 
+                        <p class="subline__price">23€</p>
+
+                    </div>
+
+                </div>
+                
+                <div class="card__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+            </div>       
+        </div>
+
+        <div class="btn__commander">
+            <button type="submit" class="intro__btn"><p>Commander</p></button>
+        </div>
+
+    </section>
+
+
+</main>
+
+    <footer class="ohmyfood-footer">
+
+        <h1 class="ohmyfood-footer__title">ohmyfood</h1>
+
+        <ul class="ohmyfood-footer__list"> 
+
+            <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+
+            <li><a href="#"><i class="fa-solid fa-hand-holding-hand"></i>Devenir partenaire</a></li>
+
+            <li><a href="#">Mentions légales</a></li>
+
+            <li><a href="mailto:laurent.dubois91710@gmail.com">Contact</a></li>
+
+        </ul>
+
+    </footer>
