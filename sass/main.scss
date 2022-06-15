@@ -1,7 +1,9 @@
-@import "Base/_typography.scss";
-@import "Utils/_mixins.scss";
-@import "Utils/_variables.scss";
-@import "Base/_base.scss";
-@import "Base/_header.scss";
-@import "Composants/_buttons.scss";
-@import "Base/_footer.scss";
+@import "Base/typography";
+@import "Utils/variables";
+@import "Utils/mixins";
+@import "Base/base";
+@import "Base/header";
+@import "Composants/buttons";
+@import "Base/footer";
+@import "Utils/animations";
+@import "Pages/menu";
