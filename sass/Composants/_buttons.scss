@@ -14,5 +14,6 @@
     
     &:hover{
         background: linear-gradient(to top left, $color-primary 5%, $color-secondary);
+        box-shadow: 1px 1px 10px $color-secondary;
     }
 }
