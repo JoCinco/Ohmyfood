@@ -1,11 +1,17 @@
-body {
+/* Propriétes générales */
+
+body , html {
     width: 100%;
+    overflow-x: hidden;
+    padding: 0;
     margin: 0;
 }
 
 * {
     box-sizing: border-box;
 }
+
+/* Location */
 
 .location {
     @extend %flex-center;
@@ -17,7 +23,8 @@ body {
         padding-right: 20px;
     }
 }
-    
+
+/* Introduction */
 .intro {
     @extend %flex-column;
     @extend %flex-center;
@@ -38,6 +45,7 @@ body {
     }
 }
 
+/* Fonctionnement */
 .fonctionnement {
     margin: 0 0 2rem 0;
 
@@ -96,6 +104,7 @@ body {
     }
 }
 
+/* Les restaurants */
 .index {
     background-color: $color-light-grey;
     padding-bottom: 50px;
@@ -187,5 +196,3 @@ body {
         }
     }
 }
-
-
