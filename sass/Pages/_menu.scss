@@ -1,4 +1,4 @@
-
+/* Image du restaurant */
 .ohmyfood-img {
     position: relative;
     top: -25px;
@@ -13,7 +13,7 @@
         object-position: center;
     } 
 }
-
+/* Titre principal + coeur + Titres secondaires */
 .ohmyfood-menu {
     background: $color-light-grey;
     border-radius: 1.5rem 1.5rem 0 0;
@@ -22,9 +22,17 @@
         @extend %flex-row;
         justify-content: space-between;
         align-items: center;
+
+        @include desktop {
+            margin-left: 40%;
+        }
         h1 {
             padding: 5px 0 0 15px;
             font-size: 1.5rem;
+
+            @include desktop {
+                font-size: 2rem;
+            }
         }
 
         .description__heart {
@@ -68,21 +76,31 @@
         height: 0.25rem;
         background-color: $color-tertiary;
        }
+
+       @include desktop {
+        margin-left: 28%;
+       }
     }    
 }
-
+/* Bloc contenant tous les plats */
 .ohmyfood-menu__services {
     @extend %flex-column;
-}
 
+    @include desktop {
+        margin-left: 28%;
+    }
+}
+/* Les cartes des plats + le check mark*/
 .ohmyfood-menu__card {
     display: flex;
     width: 90%;
+    max-width: 700px;
     padding: 0 0 0 1rem;
     margin: 10px 1rem;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 4px 4px $color-normal-grey;
+
     
     &:hover .card__check {
         margin-right: 0;
@@ -136,7 +154,7 @@
         }
     }
 }
-
+/* Le bouton pour commander */
 .btn__commander {
     display: flex;
     justify-content: center;
