@@ -103,8 +103,12 @@
 
     
     &:hover .card__check {
-        margin-right: 0;
+        margin-right: 0.1px;
         animation: check 1s forwards;
+    }
+
+    &:hover .card__check i {
+        animation: rotatecheck 1s forwards;
     }
 
     .card__recipe {

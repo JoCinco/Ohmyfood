@@ -1,10 +1,11 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap);
 h1 {
   font-family: "Shrikhand", cursive;
 }
 
-h4, h2, h3, p, li, a {
+h2, h3, h4, p, li, a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -29,13 +30,16 @@ a {
   flex-wrap: wrap;
 }
 
-.ohmyfood-menu__card .recipe__subline, .ohmyfood-menu__card, .ohmyfood-menu__main-title, .ohmyfood-head, .index__container .container__restaurant .restaurant__description, .fonctionnement__list .list__txt {
+.ohmyfood-menu__main-title, .ohmyfood-head, .index__container .container__restaurant .restaurant__description, .fonctionnement__list .list__txt {
   display: flex;
   flex-direction: row;
 }
 
-body {
+/* Propriétes générales */
+body, html {
   width: 100%;
+  overflow-x: hidden;
+  padding: 0;
   margin: 0;
 }
 
@@ -43,6 +47,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Location */
 .location {
   box-shadow: inset 0 6px 10px -10px rgb(71, 71, 71);
   background-color: rgb(226, 226, 226);
@@ -52,6 +57,7 @@ body {
   padding-right: 20px;
 }
 
+/* Introduction */
 .intro {
   background-color: rgb(241, 241, 241);
   align-items: center;
@@ -67,6 +73,7 @@ body {
   margin-top: 5px;
 }
 
+/* Fonctionnement */
 .fonctionnement {
   margin: 0 0 2rem 0;
 }
@@ -117,6 +124,7 @@ body {
   right: 10px;
 }
 
+/* Les restaurants */
 .index {
   background-color: rgb(241, 241, 241);
   padding-bottom: 50px;
@@ -191,6 +199,7 @@ body {
   visibility: hidden;
 }
 
+/*Header*/
 .ohmyfood-head {
   align-items: center;
 }
@@ -223,11 +232,14 @@ body {
 }
 .intro__btn:hover {
   background: linear-gradient(to top left, #9356DC 5%, #FF79DA);
+  box-shadow: 1px 1px 10px #FF79DA;
 }
 
+/* Footer*/
 .ohmyfood-footer {
   background-color: rgb(71, 71, 71);
   list-style-type: none;
+  height: 180px;
 }
 .ohmyfood-footer__title {
   font-size: 20px;
@@ -255,20 +267,35 @@ body {
   padding-right: 8px;
 }
 
+/* Propriétés générales du Loader */
 .loader {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inset: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
   background: rgb(241, 241, 241);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loader 3s forwards;
-  animation-delay: 2s;
+  opacity: 1;
+  overflow: hidden;
+  animation: disappear 2s 3s forwards;
+}
+.loader::after {
+  content: "";
+  position: fixed;
+  top: 28rem;
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid #9356DC;
+  border-right: 5px solid transparent;
+  border-left: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 3s infinite linear;
 }
 
+/* Propriétés des lettres du loader*/
 .lettre {
   color: #9356DC;
   font-size: 80px;
@@ -276,14 +303,13 @@ body {
   margin-bottom: 150px;
   animation: flash 3s linear infinite;
 }
-
-@keyframes loader {
-  to {
-    opacity: 0;
-    display: none;
-    visibility: hidden;
+@media all and (max-width: 500px) {
+  .lettre {
+    font-size: 50px;
   }
 }
+
+/* Animation des lettres du loader*/
 @keyframes flash {
   0% {
     color: #9356DC;
@@ -334,6 +360,23 @@ body {
   animation-delay: 0.8s;
 }
 
+/* Animation pour que le loader disparaisse*/
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Animation du spin loader*/
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Animation d'apparition en cascade des restaurants, menus et du bouton*/
 .container__restaurant, .ohmyfood-menu__entry, .ohmyfood-menu__services, .btn__commander {
   animation: apparition 3s forwards;
   visibility: hidden;
@@ -366,20 +409,6 @@ body {
     visibility: visible;
   }
 }
-@keyframes hoverheart {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-.ohmyfood-menu__entry {
-  animation: apparition 3s forwards;
-  visibility: hidden;
-}
-
 .ohmyfood-menu__entry:nth-child(2) {
   animation-delay: 3.2s;
 }
@@ -408,6 +437,17 @@ body {
   animation-delay: 4s;
 }
 
+/* Animation du coeur */
+@keyframes hoverheart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* Animation du check mark */
 @keyframes check {
   0% {
     opacity: 0;
@@ -416,6 +456,12 @@ body {
     opacity: 1;
   }
 }
+@keyframes rotatecheck {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Image du restaurant */
 .ohmyfood-img {
   position: relative;
   top: -25px;
@@ -431,6 +477,7 @@ body {
   object-position: center;
 }
 
+/* Titre principal + coeur + Titres secondaires */
 .ohmyfood-menu {
   background: rgb(241, 241, 241);
   border-radius: 1.5rem 1.5rem 0 0;
@@ -439,9 +486,19 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media all and (min-width: 992px) and (max-width: 2000px) {
+  .ohmyfood-menu__main-title {
+    margin-left: 40%;
+  }
+}
 .ohmyfood-menu__main-title h1 {
   padding: 5px 0 0 15px;
   font-size: 1.5rem;
+}
+@media all and (min-width: 992px) and (max-width: 2000px) {
+  .ohmyfood-menu__main-title h1 {
+    font-size: 2rem;
+  }
 }
 .ohmyfood-menu__main-title .description__heart {
   font-size: 2rem;
@@ -479,9 +536,24 @@ body {
   height: 0.25rem;
   background-color: #99E2D0;
 }
+@media all and (min-width: 992px) and (max-width: 2000px) {
+  .ohmyfood-menu__entry {
+    margin-left: 28%;
+  }
+}
 
+/* Bloc contenant tous les plats */
+@media all and (min-width: 992px) and (max-width: 2000px) {
+  .ohmyfood-menu__services {
+    margin-left: 28%;
+  }
+}
+
+/* Les cartes des plats + le check mark*/
 .ohmyfood-menu__card {
+  display: flex;
   width: 90%;
+  max-width: 700px;
   padding: 0 0 0 1rem;
   margin: 10px 1rem;
   background-color: white;
@@ -489,16 +561,25 @@ body {
   box-shadow: 1px 4px 4px rgb(226, 226, 226);
 }
 .ohmyfood-menu__card:hover .card__check {
-  margin-right: 0;
+  margin-right: 0.1px;
   animation: check 1s forwards;
+}
+.ohmyfood-menu__card:hover .card__check i {
+  animation: rotatecheck 1s forwards;
 }
 .ohmyfood-menu__card .card__recipe {
   width: 100%;
+  overflow: hidden;
 }
 .ohmyfood-menu__card .recipe__title {
   margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .ohmyfood-menu__card .recipe__subline {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .ohmyfood-menu__card .recipe__subline p {
@@ -506,6 +587,9 @@ body {
 }
 .ohmyfood-menu__card .recipe__subline .subline__detail {
   font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .ohmyfood-menu__card .recipe__subline .subline__price {
   font-weight: bolder;
@@ -521,13 +605,13 @@ body {
   transition: margin-right 0.5s;
   display: grid;
   place-items: center;
-  overflow: hidden;
 }
 .ohmyfood-menu__card .card__check i {
   color: white;
   font-size: 1.5rem;
 }
 
+/* Le bouton pour commander */
 .btn__commander {
   display: flex;
   justify-content: center;
