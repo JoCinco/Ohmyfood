@@ -96,6 +96,9 @@
         }
     .recipe__title {
         margin: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .recipe__subline {
         display: flex;
