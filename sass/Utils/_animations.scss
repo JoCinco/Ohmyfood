@@ -1,18 +1,34 @@
+/* Propriétés générales du Loader */
 .loader {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     inset: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
     background: $color-light-grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loader 3s forwards;
-    animation-delay: 2s;
+    opacity: 1;
     overflow: hidden;
+    animation: disappear 2s 3s forwards;
+
+
+    &::after {
+        content: "";
+        position: fixed;
+        top: 28rem;
+        width: 100px;
+        height: 100px;
+        border-top: 5px solid $color-primary;
+        border-right: 5px solid transparent;
+        border-left: 5px solid $color-secondary;
+        border-radius: 50%;
+        animation: spin 3s infinite linear;
+    }
 }
 
+/* Propriétés des lettres du loader*/
 .lettre {
     color: $color-primary;
     font-size: 80px;
@@ -25,14 +41,7 @@
     }
 }
 
-@keyframes loader {
-    to {
-        opacity: 0;
-        display: none;
-        visibility: hidden;
-    }
-}
-
+/* Animation des lettres du loader*/
 @keyframes flash {
     0% {
         color: $color-primary;
@@ -51,7 +60,6 @@
         text-shadow: 0 0 7px $color-primary;
     }
 }
-
 .lettre:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -77,12 +85,29 @@
     animation-delay: 0.8s;
 }
 
+/* Animation pour que le loader disparaisse*/
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 
+/* Animation du spin loader*/
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation d'apparition en cascade des restaurants, menus et du bouton*/
 .container__restaurant , .ohmyfood-menu__entry , .ohmyfood-menu__services , .btn__commander {
     animation: apparition 3s forwards;      
     visibility: hidden;
 }
-
 .container__restaurant:nth-child(1) {
     animation-delay: 3.2s;
 }
@@ -95,7 +120,6 @@
 .container__restaurant:nth-child(4) {
     animation-delay: 3.8s;
 }
-
 @keyframes apparition {
     0% {
         opacity: 0;
@@ -108,7 +132,29 @@
     }
 
 }
+.ohmyfood-menu__entry:nth-child(2) {
+    animation-delay: 3.2s;
+}
+.ohmyfood-menu__entry:nth-child(4) {
+    animation-delay: 3.4s;
+}
+.ohmyfood-menu__entry:nth-child(6) {
+    animation-delay: 3.6s;
+}
+.ohmyfood-menu__services:nth-child(3) {
+    animation-delay: 3.5s;
+}
+.ohmyfood-menu__services:nth-child(5) {
+    animation-delay: 3.7s;
+}
+.ohmyfood-menu__services:nth-child(7) {
+    animation-delay: 3.9s;
+}
+.btn__commander {
+    animation-delay: 4s;
+}
 
+/* Animation du coeur */
 @keyframes hoverheart {
     from {
         opacity: 0;
@@ -119,35 +165,7 @@
     }
 }
 
-.ohmyfood-menu__entry {
-    animation: apparition 3s forwards;
-    visibility: hidden;
-}
-.ohmyfood-menu__entry:nth-child(2) {
-    animation-delay: 3.2s;
-}
-.ohmyfood-menu__entry:nth-child(4) {
-    animation-delay: 3.4s;
-}
-.ohmyfood-menu__entry:nth-child(6) {
-    animation-delay: 3.6s;
-}
-
-
-.ohmyfood-menu__services:nth-child(3) {
-    animation-delay: 3.5s;
-}
-.ohmyfood-menu__services:nth-child(5) {
-    animation-delay: 3.7s;
-}
-.ohmyfood-menu__services:nth-child(7) {
-    animation-delay: 3.9s;
-}
-
-.btn__commander {
-    animation-delay: 4s;
-}
-
+/* Animation du check mark */
 @keyframes check {
     0% {
         opacity: 0;
