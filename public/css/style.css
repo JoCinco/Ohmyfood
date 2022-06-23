@@ -220,7 +220,7 @@ body, html {
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0.8rem 2.3rem;
   border-radius: 10rem;
   text-align: center;
   color: white;
@@ -239,7 +239,6 @@ body, html {
 .ohmyfood-footer {
   background-color: rgb(71, 71, 71);
   list-style-type: none;
-  height: 180px;
 }
 .ohmyfood-footer__title {
   font-size: 20px;
@@ -247,6 +246,13 @@ body, html {
   color: white;
   padding-left: 20px;
   padding-top: 10px;
+}
+@media all and (min-width: 992px) and (max-width: 2000px) {
+  .ohmyfood-footer__title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
 }
 .ohmyfood-footer__list {
   width: 60%;
@@ -265,6 +271,15 @@ body, html {
 }
 .ohmyfood-footer__list i {
   padding-right: 8px;
+}
+@media all and (min-width: 992px) and (max-width: 2000px) {
+  .ohmyfood-footer__list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
 }
 
 /* Propriétés générales du Loader */
@@ -615,12 +630,12 @@ body, html {
 .btn__commander {
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
   background: rgb(241, 241, 241);
 }
-.btn__commander p {
+.btn__commander input {
   font-weight: 100;
-  padding: 0 1rem;
+  padding: 0.8rem 2.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

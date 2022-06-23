@@ -4,7 +4,6 @@
     @extend %flex-column;
     background-color: $color-dark-grey;
     list-style-type: none;
-    height: 180px;
 
     &__title {
         font-size: 20px;
@@ -12,6 +11,12 @@
         color: white;
         padding-left: 20px;
         padding-top: 10px;
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
     }
 
     &__list {
@@ -33,6 +38,14 @@
             
         i {
             padding-right: 8px;
+        }
+
+        @include desktop {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 1rem 0;
+            font-size: 1.2rem;
         }
 
     }
