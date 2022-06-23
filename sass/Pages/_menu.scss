@@ -76,7 +76,7 @@
        }
 
        @include desktop {
-        margin-left: 28%;
+        margin-left: 23%;
        }
     }    
 }
@@ -85,7 +85,7 @@
     @extend %flex-column;
 
     @include desktop {
-        margin-left: 28%;
+        margin-left: 23%;
     }
 }
 /* Les cartes des plats + le check mark*/
@@ -159,14 +159,9 @@
         }
     }
 }
-/* Le bouton pour commander */
+/* Bouton commander au centre */
+
 .btn__commander {
     display: flex;
     justify-content: center;
-    padding: 0 0 1rem 0;
-    background: $color-light-grey;
-    input {
-        font-weight: 100;
-        padding: 0.8rem 2.3rem;
-    }
 }

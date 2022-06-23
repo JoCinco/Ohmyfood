@@ -551,14 +551,14 @@ body, html {
 }
 @media all and (min-width: 992px) and (max-width: 2000px) {
   .ohmyfood-menu__entry {
-    margin-left: 28%;
+    margin-left: 23%;
   }
 }
 
 /* Bloc contenant tous les plats */
 @media all and (min-width: 992px) and (max-width: 2000px) {
   .ohmyfood-menu__services {
-    margin-left: 28%;
+    margin-left: 23%;
   }
 }
 
@@ -624,16 +624,10 @@ body, html {
   font-size: 1.5rem;
 }
 
-/* Le bouton pour commander */
+/* Bouton commander au centre */
 .btn__commander {
   display: flex;
   justify-content: center;
-  padding: 0 0 1rem 0;
-  background: rgb(241, 241, 241);
-}
-.btn__commander input {
-  font-weight: 100;
-  padding: 0.8rem 2.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
