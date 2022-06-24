@@ -17,6 +17,12 @@
             justify-content: center;
             font-size: 1.5rem;
         }
+
+        @include tv {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
     }
 
     &__list {
@@ -48,5 +54,12 @@
             font-size: 1.2rem;
         }
 
+        @include tv {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
     }
 }
